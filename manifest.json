@@ -1,0 +1,54 @@
+{
+
+  "manifest_version": 2,
+  "name": "Moodle Autologin",
+  "version": "1.0",
+
+  "description": "Escape your daily duties with this addon for Firefox. Just enter the URL of your Moodle and sleep longer than you should!",
+  "homepage_url": "https://github.com/thisisfel1x/moodle-auto-login",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "moodle-auto-login@thisisfel1x"
+    }
+  },
+
+  "icons": {
+    "64": "/icons/taskbar-32.png",
+    "32": "/icons/taskbar-64.png"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "32": "/icons/taskbar-32.png",
+      "64": "/icons/taskbar-64.png"
+    },
+    "default_title": "Moodle Autologin",
+    "theme_icons": [{
+      "light": "/icons/taskbar-32.png",
+      "dark": "/icons/taskbar-32.png",
+      "size": 32
+    }, {
+      "light": "/icons/taskbar-64.png",
+      "dark": "/icons/taskbar-64.png",
+      "size": 64
+    }]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.xxx/moodle/blocks/exa2fa/login/"],
+      "js": ["test.js"]
+    },
+    {
+      "matches": ["*://*.xxx/moodle/my/"],
+      "js": ["test2.js"]
+    }
+  ],
+
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ]
+}
