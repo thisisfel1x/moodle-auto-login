@@ -38,12 +38,14 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.xxx/moodle/blocks/exa2fa/login/"],
-      "js": ["test.js"]
+      "matches": [
+        "*://*.xxx/moodle/blocks/exa2fa/login/"
+      ],
+      "js": ["AutoLogin.js"]
     },
     {
       "matches": ["*://*.xxx/moodle/my/"],
-      "js": ["test2.js"]
+      "js": ["AutoCourse.js"]
     }
   ],
 
