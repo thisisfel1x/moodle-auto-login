@@ -39,18 +39,25 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.xxx/moodle/blocks/exa2fa/login/"
+        "*://*/moodle/blocks/exa2fa/login/"
       ],
       "js": ["AutoLogin.js"]
     },
     {
-      "matches": ["*://*.xxx/moodle/my/"],
+      "matches": ["*://*/moodle/my/"],
       "js": ["AutoCourse.js"]
+    },
+    {
+      "matches": ["*://*/moodle/course/view.php?*"],
+      "js": ["AutoTab.js"]
     }
   ],
 
   "permissions": [
     "storage",
-    "unlimitedStorage"
+    "unlimitedStorage",
+    "<all_urls>",
+    "activeTab",
+    "tabs"
   ]
 }
