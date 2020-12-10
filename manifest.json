@@ -25,6 +25,7 @@
       "64": "/icons/taskbar-64.png"
     },
     "default_title": "Moodle Autologin",
+    "default_popup": "interface/index.html",
     "theme_icons": [{
       "light": "/icons/taskbar-32.png",
       "dark": "/icons/taskbar-32.png",
@@ -48,16 +49,13 @@
       "js": ["AutoCourse.js"]
     },
     {
-      "matches": ["*://*/moodle/course/view.php?*"],
+      "matches": ["*://*/moodle/course/*"],
       "js": ["AutoTab.js"]
     }
   ],
 
   "permissions": [
     "storage",
-    "unlimitedStorage",
-    "<all_urls>",
-    "activeTab",
-    "tabs"
+    "unlimitedStorage"
   ]
 }

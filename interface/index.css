@@ -1,0 +1,31 @@
+@font-face {
+    font-family: roboto;
+    src: url(/fonts/Roboto.ttf);
+}
+
+html, body {
+    background-color: #0C1016;
+    min-width: 300px;
+    max-width: 650px;
+    width: calc(100% - 30px);
+}
+
+h1, p, label {
+    font-family: roboto, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+p, label {
+    font-size: 20px;
+}
+
+#checkbox {
+    margin: auto;
+    width: 25%;
+    padding: 10px;
+}

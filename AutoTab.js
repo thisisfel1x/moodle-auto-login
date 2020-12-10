@@ -1,13 +1,6 @@
-document.addEventListener("DOMContentLoaded", listTabs);
-
-function getCurrentWindowTabs() {
-    return browser.tabs.query({currentWindow: true});
-}
-
-function listTabs() {
-    console.log("debug");
-    getCurrentWindowTabs().then((tabs) => {
-        console.log(tabs.toString())
-    });
-}
-
+browser.storage.local.get().then(r => {
+    console.log('Trying to close the window...');
+    if(r[0]) {
+        window.close();
+    }
+})
